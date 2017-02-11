@@ -1,0 +1,17 @@
+- name: Basic document assembly.
+  description: >-
+    Basic document assembly capabilities of the Word JavaScript API. Learn the
+    basic objects and usage.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/word/Basics/basic-doc-assembly.yaml
+  group: Basics
+- name: Get Custom Document Properties
+  description: ' Shows how to retrieve the current document''s custom properties.'
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/word/Basics/custom-properties-access.yaml
+  group: Basics
+- name: Basic API call
+  description: Colors the selected text in red.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/word/basic/basic-api-call.yaml
+  group: Basic

@@ -1,0 +1,44 @@
+- name: Basic API call
+  description: Colors the selected range in yellow.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/basics/basic-api-call.yaml
+  group: Basics
+- name: API call with Fabric notification toast
+  description: >-
+    Highlights the currently-selected range and reports its address via a
+    Fabric-based notification toast.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/general-starter-templates/api-call-with-notification-toast.yaml
+  group: General Starter Templates
+- name: Report generation
+  description: >-
+    Writes data to the workbook, reads and applies basic formatting, and adds a
+    chart bound to that data.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/general-starter-templates/report-generation.yaml
+  group: General Starter Templates
+- name: Copy and multiply values
+  description: Explore the APIs to copy and multiply values in a range
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/range/copy-multiply-values.yaml
+  group: Range
+- name: Formatting
+  description: Explore the APIs to format a range
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/range/formatting.yaml
+  group: Range
+- name: 'Insert, delete, clear range'
+  description: 'Explore the APIs to inset, delete and clear a range'
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/range/insert-delete-clear-range.yaml
+  group: Range
+- name: Selected range
+  description: Explores the APIs for the currently selected range
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/range/selected-range.xaml
+  group: Range
+- name: Set and get values
+  description: Explores the APIs to set and get values from a range
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/excel/range/set-get-values.yaml
+  group: Range

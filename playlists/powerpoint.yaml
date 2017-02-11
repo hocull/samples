@@ -1,0 +1,5 @@
+- name: insert-image
+  description: Inserts an image to the current slide.
+  gist: >-
+    https://raw.githubusercontent.com/WrathOfZombies/samples/master/samples/powerpoint/basics/insert-image.yaml
+  group: Basics

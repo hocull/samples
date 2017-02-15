@@ -1,0 +1,80 @@
+id: ciz79iwgk0000456w9wch1l0m
+gist: ''
+source: PROJECT
+author: Microsoft
+name: Get information about the project
+description: >-
+  Shows how to use project level fields to find things like the project's start
+  date
+script:
+  content: |
+
+
+    $('#run').click(getProjectInformation);
+
+      // Get the specified fields for the active project.
+        function getProjectInformation() {
+            var fields =
+                [Office.ProjectProjectFields.Start, Office.ProjectProjectFields.Finish, Office.ProjectProjectFields.GUID];
+            var fieldValues = ['Start: ', ' Finish: ', ' GUID: '];
+            var index = 0; 
+            getField();
+
+            // Get each field, and then display the field values in the add-in.
+            function getField() {
+                if (index == fields.length) {
+                    var output = '';
+                    for (var i = 0; i < fieldValues.length; i++) {
+                        output += fieldValues[i];
+                    }
+                    console.log(output);
+                }
+                else {
+                    Office.context.document.getProjectFieldAsync(
+                        fields[index],
+                        function (result) {
+
+                            // If the call is successful, get the field value and then get the next field.
+                            if (result.status === Office.AsyncResultStatus.Succeeded) {
+                                fieldValues[index] += result.value.fieldValue;
+                                getField(index++);
+                            }
+                            else {
+                                onError(result.error);
+                            }
+                        }
+                    );
+                }
+            }
+        }
+
+        function onError(error) {
+            console.log(error);
+        }
+  language: typescript
+style:
+  content: /* Your style goes here */
+  language: css
+template:
+  content: |-
+    <button id="run" class="ms-Button">
+        <span class="ms-Button-label">Run</span>
+    </button>
+  language: html
+libraries: |-
+  // Office.js
+  https://appsforoffice.microsoft.com/lib/1/hosted/Office.js
+
+  // NPM libraries
+  jquery
+  office-ui-fabric-js/dist/js/fabric.min.js
+  office-ui-fabric-js/dist/css/fabric.min.css
+  office-ui-fabric-js/dist/css/fabric.components.min.css
+  @microsoft/office-js-helpers/dist/office.helpers.min.js
+  core-js/client/core.min.js
+
+  // IntelliSense: Use dt~library_name for DefinitelyTyped or URLs to d.ts files
+  dt~office-js
+  dt~jquery
+  dt~core-js
+  @microsoft/office-js-helpers/dist/office.helpers.d.ts
